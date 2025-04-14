@@ -32,5 +32,12 @@ export default defineConfig(({ mode }) => ({
         chunkFileNames: 'assets/[name].js',
       },
     },
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
 }));
